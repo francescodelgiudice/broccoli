@@ -30,7 +30,7 @@ body div {
 }
 
 .text-wrapper {
-  height: 50vh;
+  height: 30vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
