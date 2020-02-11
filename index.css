@@ -7,6 +7,11 @@ body {
   background-color: #f2baba;
 }
 
+.diaframma {
+  background-color: black;
+  color: white;
+}
+
 body div {
   overflow: hidden;
 }
@@ -91,6 +96,21 @@ button {
   background: transparent; /* make scrollbar transparent */
 }
 
+a {
+  text-decoration: none;
+  font-style: italic;
+  color: black;
+}
+
+.diaframma a {
+  color: white;
+}
+
+.poem-wrapper .single p {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 @media screen and (min-width: 1000px) {
   .body-wrapper {
     flex-direction: row-reverse;
@@ -135,10 +155,6 @@ button {
   .poem-wrapper p {
     font-size: 1.5rem;
     line-height: 1.8rem;
-  }
-
-  .poem-wrapper .single p {
-    font-size: 2rem;
   }
 
   .columns {
