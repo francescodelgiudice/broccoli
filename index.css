@@ -91,6 +91,10 @@ button {
   margin-bottom: 3.5rem;
 }
 
+.diaframma .poem-wrapper p {
+  font-size: 1.5rem;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
@@ -109,6 +113,10 @@ a {
 .poem-wrapper .single p {
   font-size: 2rem;
   line-height: 2rem;
+}
+
+.diaframma .poem-wrapper .single p {
+  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 1000px) {
