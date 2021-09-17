@@ -1,111 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Broccoli</title>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-       <script>
-            var images = [], x = -1;
-            images[0] = "./images/1.jpg";
-            images[1] = "./images/2.jpg";
-            images[2] = "./images/3.jpg";
-            images[3] = "./images/4.jpg";
-            images[4] = "./images/5.jpg";
-            images[5] = "./images/6.jpg";
-            images[6] = "./images/7.jpg";
-            images[7] = "./images/8.jpg";
+  <head>
+    <title>Broccoli</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      var images = [],
+        x = -1
+      images[0] = './images/1.jpg'
+      images[1] = './images/2.jpg'
+      images[2] = './images/3.jpg'
+      images[3] = './images/4.jpg'
+      images[4] = './images/5.jpg'
+      images[5] = './images/6.jpg'
+      images[6] = './images/7.jpg'
+      images[7] = './images/8.jpg'
 
-            window.onload = function() {
-                setInterval(displayNextImage, 2000);
-                var today = new Date().getTime();
-                var date = new Date("18 September 2016 12:00").getTime();
-                var difference = parseInt(today) - parseInt(date)
-                var totalDays = parseInt(difference) / (1000*60*60*24)
-                var years = parseInt(parseInt(totalDays)/365)
-                var months = parseInt(parseInt(totalDays%365)/31)
-                var days = parseInt(parseInt(totalDays%365)%30.5)
-                document.getElementById("days").innerHTML = days
-                document.getElementById("months").innerHTML = months
-                document.getElementById("years").innerHTML = years
-            }
+      window.onload = function () {
+        setInterval(displayNextImage, 2000)
+        var today = new Date().getTime()
+        var date = new Date('18 September 2016 00:00').getTime()
+        var difference = parseInt(today) - parseInt(date)
+        var totalDays = parseInt(difference) / (1000 * 60 * 60 * 24)
+        var years = parseInt(parseInt(totalDays) / 365)
+        var months = parseInt(parseInt(totalDays % 365) / 31)
+        var days = parseInt(parseInt(totalDays % 365) % 30.5)
+        document.getElementById('days').innerHTML = days
+        document.getElementById('months').innerHTML = months
+        document.getElementById('years').innerHTML = years
+      }
 
-            function displayNextImage() {
-              x = (x === images.length - 1) ? 0 : x + 1;
-              document.getElementById("image").src = images[x];
-            }
-        </script>
-    </head>
-    <body>
-        <div class="body-wrapper">
-            <div class="text-wrapper">
-                <h1> Cara Emma, oggi stiamo insieme da: </h1>
-                <div class='flex row'>
-                    <span id='years' class='number'></span>
-                    <span class='timer-text'>anni</span>
-                </div>
-                <div class='flex row'>
-                    <span id='months' class='number'></span>
-                    <span class='timer-text'>mesi</span>
-                </div>
-                <div class='flex row'>
-                    <span id='days' class='number'></span>
-                    <span class='timer-text'>giorni</span>
-                </div>
-            </div>
-            <div class="image-wrapper">
-                <img id='image' src='./images/1.jpg' alt='broccoli' />
-             </div> 
+      function displayNextImage () {
+        x = x === images.length - 1 ? 0 : x + 1
+        document.getElementById('image').src = images[x]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="text-wrapper">
+        <h1>Cara Emma, oggi stiamo insieme da:</h1>
+        <div class="flex row">
+          <span id="years" class="number"></span>
+          <span class="timer-text">anni</span>
         </div>
-        <div class='poem-wrapper'>
-            <div class='column'>
-                <p>Piegata leggermente sul lavabo </br>
-                    la guardo truccarsi con calma il viso </br>
-                    mi ricordo sdraiato sul pavimento </br>
-                    ascoltandola accennando un sorriso </br>
-                    lei si lamenta credo di un suo genitore </br>
-                    le parole hanno perso il senso, mi concentro sulla voce </br>
-                    come a cercare ogni flessione del suo suono </br>
-                    come se ci fosse un segreto dietro il suo tono</p>
-                <p>
-                    Non so come sia stato possibile o cosa sia stato </br>
-                    ma il suo viso ha trovato riparo dentro il mio costato, </br>
-                    forse é stato un diluvio o un tuono col suo fragore </br>
-                    ma il suo ricordo ora giace sotto il tetto del mio cuore </br>
-                    e ogni tanto dopo qualche forte pulsazione </br>
-                    lo sento lamentarsi dei tuoni e di tutto quel rumore </br>
-                </p>
-                <p> Nell'affanno cerco una risposta attento </br>
-                    perché alla sua voce é seguito il silenzio, </br>
-                    troppe volte, in un suo discorso o una questione, </br>
-                    ho lasciato che il mio cervello si aggiudicasse la mia attenzione </br>
-                    e ora rimpiango tutte quelle volte </br>
-                    in cui non mi sono saziato col suono delle sue parole. </br>
-                    cosi quando mi manca, </br>
-                    dalla finestra guardo gli astri </br>
-                    sperando che anche lei in quel momento </br>
-                    mi pensi e li guardi, </br>
-                    perché ogni tanto penso che per averla incontrata </br>
-                    forse qualche galassia o costellazione deve essersi allineata.</p>
-
-                <p> Alcune volte é lo scalino per cui inciampo </br>
-                    ma piú volte é la sporgenza a cui mi aggrappo, </br>
-                    per non cadere </br>
-                    e stare bene  </p>
-                <p> 
-                    Sento ora il suo viso e la sua voce, </br>
-                    vagano nelle vene cercando un posto inesplorato </br>
-                    perché se prima aveva i miei occhi e il mio cervello, </br>
-                    ora lei anche il mio <a href='./diaframma.html'>costato</a> ha invaso. </br>
-                </p>
-            </div>
-            <div class='single'>
-                <p>
-                    Riposa ora ricordo, </br>
-                    dopo aver così tanto vagabondato</br>
-                    perché finché ne avrò la forza,</br> 
-                    nel mio cuore ti darò riparo.
-                </p>
-            </div>
+        <div class="flex row">
+          <span id="months" class="number"></span>
+          <span class="timer-text">mesi</span>
         </div>
-    </body>
+        <div class="flex row">
+          <span id="days" class="number"></span>
+          <span class="timer-text">giorni</span>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img id="image" src="./images/1.jpg" alt="broccoli" />
+      </div>
+    </div>
+    <div class="poem-wrapper">
+      <div class="column">
+        <p>
+          Piegata leggermente sul lavabo <br />
+          la guardo truccarsi con calma il viso <br />
+          mi ricordo sdraiato sul pavimento <br />
+          ascoltandola accennando un sorriso <br />
+          lei si lamenta credo di un suo genitore <br />
+          le parole hanno perso il senso, mi concentro sulla voce <br />
+          come a cercare ogni flessione del suo suono <br />
+          come se ci fosse un segreto dietro il suo tono
+        </p>
+        <p>
+          Non so come sia stato possibile o cosa sia stato <br />
+          ma il suo viso ha trovato riparo dentro il mio costato, <br />
+          forse é stato un diluvio o un tuono col suo fragore <br />
+          ma il suo ricordo ora giace sotto il tetto del mio cuore <br />
+          e ogni tanto dopo qualche forte pulsazione <br />
+          lo sento lamentarsi dei tuoni e di tutto quel rumore <br />
+        </p>
+        <p>
+          Nell'affanno cerco una risposta attento <br />
+          perché alla sua voce é seguito il silenzio, <br />
+          troppe volte, in un suo discorso o una questione, <br />
+          ho lasciato che il mio cervello si aggiudicasse la mia attenzione
+          <br />
+          e ora rimpiango tutte quelle volte <br />
+          in cui non mi sono saziato col suono delle sue parole. <br />
+          cosi quando mi manca, <br />
+          dalla finestra guardo gli astri <br />
+          sperando che anche lei in quel momento <br />
+          mi pensi e li guardi, <br />
+          perché ogni tanto penso che per averla incontrata <br />
+          forse qualche galassia o costellazione deve essersi allineata.
+        </p>
+
+        <p>
+          Alcune volte é lo scalino per cui inciampo <br />
+          ma piú volte é la sporgenza a cui mi aggrappo, <br />
+          per non cadere <br />
+          e stare bene
+        </p>
+        <p>
+          Sento ora il suo viso e la sua voce, <br />
+          vagano nelle vene cercando un posto inesplorato <br />
+          perché se prima aveva i miei occhi e il mio cervello, <br />
+          ora lei anche il mio <a href="./diaframma.html">costato</a> ha invaso.
+          <br />
+        </p>
+      </div>
+      <div class="single">
+        <p>
+          Riposa ora ricordo, <br />
+          dopo aver così tanto vagabondato<br />
+          perché finché ne avrò la forza,<br />
+          nel mio cuore ti darò riparo.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
